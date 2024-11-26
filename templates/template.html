@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard TI</title>
+  <link rel="shortcut icon" href="/static/favicon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.3/css/all.css'>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+</head>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <a href="/" class="navbar-brand">HOME</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="nav_admin" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Main
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/usuarios">Usuários</a>
+          <a class="dropdown-item" href="/manutencao">Manutenção</a>
+          <a class="dropdown-item" href="/logout">SAIR</a>
+        </div>
+      </li>
+            <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Faturas
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/faturas/Janeiro">Janeiro</a>
+          <a class="dropdown-item" href="/faturas/Fevereiro">Fevereiro</a>
+          <a class="dropdown-item" href="/faturas/Marco">Março</a>
+          <a class="dropdown-item" href="/faturas/Abril">Abril</a>
+          <a class="dropdown-item" href="/faturas/Maio">Maio</a>
+          <a class="dropdown-item" href="/faturas/Junho">Junho</a>
+          <a class="dropdown-item" href="/faturas/Julho">Julho</a>
+          <a class="dropdown-item" href="/faturas/Agosto">Agosto</a>
+          <a class="dropdown-item" href="/faturas/Setembro">Setembro</a>
+          <a class="dropdown-item" href="/faturas/Outubro">Outubro</a>
+          <a class="dropdown-item" href="/faturas/Novembro">Novembro</a>
+          <a class="dropdown-item" href="/faturas/Dezembro">Dezembro</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/fornecedores">Fornecedores</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ideias">Idéias</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logs">Logs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/changelog">Changelog</a>
+      </li>
+           <!--
+      <li class="nav-item">
+        <a class="nav-link" href="#">Outros</a>
+      </li>-->
+    </ul>
+    <small class="float-right"> Versão 1.6.0</small>
+  </div>
+</nav>
+<body>
+ {% block conteudo %}{% endblock %}
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js" ></script>
+</html>

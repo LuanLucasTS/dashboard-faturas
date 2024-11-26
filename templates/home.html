@@ -1,0 +1,35 @@
+{% extends "template.html" %}
+{% block conteudo %}
+
+
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Bem vindo ao dashboard da TI Financial!</h1>
+      <p>Aqui você encontra algumas ferramentas para facilitar o trabalho diário.</p>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Faturas</h2>
+        <p>Aqui é possível acompanhar o faturamento da TI mês a mês com avisos sobre vencimento e emissão das faturas e se foram enviadas ou não ao gestão top. </p>
+        <p><a class="btn btn-secondary" href="/faturas/Dezembro" role="button">Ver detalhes &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Fornecedores</h2>
+        <p>Cadastre ou altere a lista de fornecerdores da TI para ter um maior controle dos dados como contatos, endereços e descrição dos serviços prestados. </p>
+        <p><a class="btn btn-secondary" href="/fornecedores" role="button">Ver detalhess &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Changelog</h2>
+        <p>Visualize cada alteração feita na aplicação para acompanhar todas as novidades.</p>
+        <p><a class="btn btn-secondary" href="/changelog" role="button">Ver detalhes &raquo;</a></p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,141 @@
+{% extends "template.html" %}
+{% block conteudo %}
+
+<div class="container-fluid">
+           {% for fatura in fatura %}
+    <div class="shadow p-3 mb-2 bg-dark h2 rounded text-white text-center "><i class="fas fa-user"></i> Edita fatura {{ mes }} <button class="btn btn-danger float-right" onclick="confirma_desativacao({{ fatura[0] }}, '{{ mes }}')"><i class="fas fa-trash"></i> Excluir</button>
+</div>
+
+
+       <form action="{{ url_for('editar_faturas2', mes=mes, id_fatura=fatura[0]) }}" method="post" enctype="multipart/form-data" class="bg-dark container-fluid rounded">
+       <fieldset>
+           <div class="row">
+           <div class="col-sm">
+           <div class="form-group">
+               <label class="p-2 mb-2 bg-dark h5 rounded text-white" for="recebida">Recebida</label><br>
+            <select class=" col-form-label" id="recebida" name="recebida">
+                <option value="{{ fatura[1] }}">{{ fatura[1] }}</option>
+                {% if fatura[1] == 'SIM'%}
+                <option value="NÃO">NÃO</option>
+                {% else %}
+                <option value="SIM">SIM</option>
+                {% endif %}
+            </select>
+           </div>
+           <div class="form-group">
+               <label class="p-2 mb-2 bg-dark h5 rounded text-white" for="gestaotop">Pago</label><br>
+           <select class=" col-form-label" id="gestaotop" name="gestaotop">
+                <option value="{{ fatura[2] }}">{{ fatura[2] }}</option>
+                {% if fatura[2] == 'SIM'%}
+                <option value="NÃO">NÃO</option>
+                {% else %}
+                <option value="SIM">SIM</option>
+                {% endif %}
+            </select>
+           </div>
+           <div class="form-group">
+               <label class="p-2 mb-2 bg-dark h5 rounded text-white" for="rateio">Rateio</label><br>
+            <select class=" col-form-label" id="rateio" name="rateio">
+                <option value="{{ fatura[3] }}">{{ fatura[3] }}</option>
+                {% if fatura[3] == 'SIM'%}
+                <option value="NÃO">NÃO</option>
+                {% else %}
+                <option value="SIM">SIM</option>
+                {% endif %}
+            </select>
+           </div>
+           <div class="form-group">
+               <label class="p-2 mb-2 bg-dark h5 rounded text-white" for="fornecedor">Fornecedor</label><br>
+            <select class=" col-form-label" id="fornecedor" name="fornecedor">
+                <option value="{{ fatura[4] }}">{{ fatura[11] }} - {{ fatura[12] }}</option>
+                {% for fornecedor in fornecedor %}
+                <option value="{{ fornecedor[0] }}">{{ fornecedor[1] }} - {{ fornecedor[3]}}</option>
+                {% endfor %}
+            </select>
+           </div>
+           <a class="btn btn-success float-left" href="{{ url_for('novo_fornecedor') }}"><i class="fas fa-plus-square "></i> Novo Fornecedor</a>
+           </div>
+
+           <div class="col-sm">
+           <div class="form-group">
+            <label class="p-2 mb-2 bg-dark h5 rounded text-white" for="emitido">Emitido</label>
+            <input type="date" id="emitido" name="emitido" class="form-control col-sm-6" value="{{ fatura[5]}}">
+           </div>
+           <div class="form-group">
+            <label class="p-2 mb-2 bg-dark h5 rounded text-white" for="vencimento">Vencimento</label>
+            <input type="date" id="vencimento" name="vencimento" class="form-control col-sm-6" value="{{ fatura[6] }}">
+           </div>
+           <div class="form-group">
+            <label class="p-2 mb-2 bg-dark h5 rounded text-white" for="valor">Valor</label>
+            <input type="text" id="valor" name="valor" oninput="formatarNumero(this)" autocomplete="off" class="form-control col-sm-6" value="{{ fatura[8] }}">
+           </div>
+           <div class="form-group">
+            <label class="p-2 mb-2 bg-dark h5 rounded text-white" for="vencimento">Nota Fiscal</label>
+            <input type="text" id="nf" name="nf" class="form-control col-sm-6" autocomplete="off" value="{{ fatura[7] }}">
+           </div>
+            <button type="submit" class="btn btn-primary mr-2"><i class="fas fa-save "></i> Salvar</button>
+               <br><br>
+            <br><br>
+           </div>
+       </div>
+        </fieldset>
+       </form>
+
+           {% endfor %}
+
+</div>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="confirmacao">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirmação de Exclusão</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Tem certeza que deseja excluir esse Item?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" onclick="confirma_desativacao_confirmado()">Excluir</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+function confirma_desativacao(id, mes) {
+  $('#confirmacao').modal('show'); // Mostra a janela de confirmação personalizada
+  $('#confirmacao').data('id', id); // Armazena o id da fatura como um atributo de dados
+  $('#confirmacao').data('mes', mes); // Armazena o mês da fatura como um atributo de dados
+}
+
+function confirma_desativacao_confirmado() {
+  var id = $('#confirmacao').data('id'); // Obtém o id da fatura do atributo de dados
+  var mes = $('#confirmacao').data('mes'); // Obtém o mês da fatura do atributo de dados
+  window.location.href = "/excluir_fatura/" + id + "/" + mes; // Executa a ação de exclusão com id e mês
+}
+
+</script>
+<script>
+    function formatarNumero(input) {
+        // Remove caracteres não numéricos
+        let valor = input.value.replace(/[^\d]/g, '');
+
+        // Divide o valor em partes antes e depois das casas decimais
+        let parteInteira = valor.substr(0, valor.length - 2);
+        let parteDecimal = valor.substr(valor.length - 2);
+
+        // Formata o valor com a vírgula
+        let valorFormatado = parteInteira + ',' + parteDecimal;
+
+        // Atualiza o valor do input
+        input.value = valorFormatado;
+    }
+</script>
+
+{% endblock %}

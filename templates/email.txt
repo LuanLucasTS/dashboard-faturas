@@ -1,0 +1,8 @@
+Recuperação de senha do usuário {{usuario}}
+
+Para redefinir sua senha, acesse o link:
+ATENÇÃO! Esse link funciona somente com a VPN conectada.
+{{linkint}}
+
+
+Esse email tem validade de duas horas.

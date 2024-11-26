@@ -1,0 +1,305 @@
+-- `bd-vazio`.faturas_abril definition
+
+CREATE TABLE `faturas_abril` (
+  `id_fatura` int(20) NOT NULL AUTO_INCREMENT,
+  `recebida` varchar(5) NOT NULL,
+  `gestaotop` varchar(5) NOT NULL,
+  `rateio` varchar(5) NOT NULL,
+  `fornecedor` int(5) NOT NULL,
+  `emitido` date DEFAULT NULL,
+  `vencimento` date DEFAULT NULL,
+  `nf` text DEFAULT NULL,
+  `valor` text DEFAULT NULL,
+  `dias_emitido` int(20) DEFAULT NULL,
+  `dias_vencimento` int(20) DEFAULT NULL,
+  PRIMARY KEY (`id_fatura`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+
+
+-- `bd-vazio`.faturas_agosto definition
+
+CREATE TABLE `faturas_agosto` (
+  `id_fatura` int(20) NOT NULL AUTO_INCREMENT,
+  `recebida` varchar(5) NOT NULL,
+  `gestaotop` varchar(5) NOT NULL,
+  `rateio` varchar(5) NOT NULL,
+  `fornecedor` int(5) NOT NULL,
+  `emitido` date DEFAULT NULL,
+  `vencimento` date DEFAULT NULL,
+  `nf` text DEFAULT NULL,
+  `valor` text DEFAULT NULL,
+  `dias_emitido` int(20) DEFAULT NULL,
+  `dias_vencimento` int(20) DEFAULT NULL,
+  PRIMARY KEY (`id_fatura`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+
+
+-- `bd-vazio`.faturas_dezembro definition
+
+CREATE TABLE `faturas_dezembro` (
+  `id_fatura` int(20) NOT NULL AUTO_INCREMENT,
+  `recebida` varchar(5) NOT NULL,
+  `gestaotop` varchar(5) NOT NULL,
+  `rateio` varchar(5) NOT NULL,
+  `fornecedor` int(5) NOT NULL,
+  `emitido` date DEFAULT NULL,
+  `vencimento` date DEFAULT NULL,
+  `nf` text DEFAULT NULL,
+  `valor` text DEFAULT NULL,
+  `dias_emitido` int(20) DEFAULT NULL,
+  `dias_vencimento` int(20) DEFAULT NULL,
+  PRIMARY KEY (`id_fatura`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+
+
+-- `bd-vazio`.faturas_fevereiro definition
+
+CREATE TABLE `faturas_fevereiro` (
+  `id_fatura` int(20) NOT NULL AUTO_INCREMENT,
+  `recebida` varchar(5) NOT NULL,
+  `gestaotop` varchar(5) NOT NULL,
+  `rateio` varchar(5) NOT NULL,
+  `fornecedor` int(5) NOT NULL,
+  `emitido` date DEFAULT NULL,
+  `vencimento` date DEFAULT NULL,
+  `nf` text DEFAULT NULL,
+  `valor` text DEFAULT NULL,
+  `dias_emitido` int(20) DEFAULT NULL,
+  `dias_vencimento` int(20) DEFAULT NULL,
+  PRIMARY KEY (`id_fatura`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+
+
+-- `bd-vazio`.faturas_janeiro definition
+
+CREATE TABLE `faturas_janeiro` (
+  `id_fatura` int(20) NOT NULL AUTO_INCREMENT,
+  `recebida` varchar(5) NOT NULL,
+  `gestaotop` varchar(5) NOT NULL,
+  `rateio` varchar(5) NOT NULL,
+  `fornecedor` int(5) NOT NULL,
+  `emitido` date DEFAULT NULL,
+  `vencimento` date DEFAULT NULL,
+  `nf` text DEFAULT NULL,
+  `valor` text DEFAULT NULL,
+  `dias_emitido` int(20) DEFAULT NULL,
+  `dias_vencimento` int(20) DEFAULT NULL,
+  PRIMARY KEY (`id_fatura`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+
+
+-- `bd-vazio`.faturas_julho definition
+
+CREATE TABLE `faturas_julho` (
+  `id_fatura` int(20) NOT NULL AUTO_INCREMENT,
+  `recebida` varchar(5) NOT NULL,
+  `gestaotop` varchar(5) NOT NULL,
+  `rateio` varchar(5) NOT NULL,
+  `fornecedor` int(5) NOT NULL,
+  `emitido` date DEFAULT NULL,
+  `vencimento` date DEFAULT NULL,
+  `nf` text DEFAULT NULL,
+  `valor` text DEFAULT NULL,
+  `dias_emitido` int(20) DEFAULT NULL,
+  `dias_vencimento` int(20) DEFAULT NULL,
+  PRIMARY KEY (`id_fatura`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+
+
+-- `bd-vazio`.faturas_junho definition
+
+CREATE TABLE `faturas_junho` (
+  `id_fatura` int(20) NOT NULL AUTO_INCREMENT,
+  `recebida` varchar(5) NOT NULL,
+  `gestaotop` varchar(5) NOT NULL,
+  `rateio` varchar(5) NOT NULL,
+  `fornecedor` int(5) NOT NULL,
+  `emitido` date DEFAULT NULL,
+  `vencimento` date DEFAULT NULL,
+  `nf` text DEFAULT NULL,
+  `valor` text DEFAULT NULL,
+  `dias_emitido` int(20) DEFAULT NULL,
+  `dias_vencimento` int(20) DEFAULT NULL,
+  PRIMARY KEY (`id_fatura`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+
+
+-- `bd-vazio`.faturas_maio definition
+
+CREATE TABLE `faturas_maio` (
+  `id_fatura` int(20) NOT NULL AUTO_INCREMENT,
+  `recebida` varchar(5) NOT NULL,
+  `gestaotop` varchar(5) NOT NULL,
+  `rateio` varchar(5) NOT NULL,
+  `fornecedor` int(5) NOT NULL,
+  `emitido` date DEFAULT NULL,
+  `vencimento` date DEFAULT NULL,
+  `nf` text DEFAULT NULL,
+  `valor` text DEFAULT NULL,
+  `dias_emitido` int(20) DEFAULT NULL,
+  `dias_vencimento` int(20) DEFAULT NULL,
+  PRIMARY KEY (`id_fatura`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+
+
+-- `bd-vazio`.faturas_marco definition
+
+CREATE TABLE `faturas_marco` (
+  `id_fatura` int(20) NOT NULL AUTO_INCREMENT,
+  `recebida` varchar(5) NOT NULL,
+  `gestaotop` varchar(5) NOT NULL,
+  `rateio` varchar(5) NOT NULL,
+  `fornecedor` int(5) NOT NULL,
+  `emitido` date DEFAULT NULL,
+  `vencimento` date DEFAULT NULL,
+  `nf` text DEFAULT NULL,
+  `valor` text DEFAULT NULL,
+  `dias_emitido` int(20) DEFAULT NULL,
+  `dias_vencimento` int(20) DEFAULT NULL,
+  PRIMARY KEY (`id_fatura`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+
+
+-- `bd-vazio`.faturas_novembro definition
+
+CREATE TABLE `faturas_novembro` (
+  `id_fatura` int(20) NOT NULL AUTO_INCREMENT,
+  `recebida` varchar(5) NOT NULL,
+  `gestaotop` varchar(5) NOT NULL,
+  `rateio` varchar(5) NOT NULL,
+  `fornecedor` int(5) NOT NULL,
+  `emitido` date DEFAULT NULL,
+  `vencimento` date DEFAULT NULL,
+  `nf` text DEFAULT NULL,
+  `valor` text DEFAULT NULL,
+  `dias_emitido` int(20) DEFAULT NULL,
+  `dias_vencimento` int(20) DEFAULT NULL,
+  PRIMARY KEY (`id_fatura`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+
+
+-- `bd-vazio`.faturas_outubro definition
+
+CREATE TABLE `faturas_outubro` (
+  `id_fatura` int(20) NOT NULL AUTO_INCREMENT,
+  `recebida` varchar(5) NOT NULL,
+  `gestaotop` varchar(5) NOT NULL,
+  `rateio` varchar(5) NOT NULL,
+  `fornecedor` int(5) NOT NULL,
+  `emitido` date DEFAULT NULL,
+  `vencimento` date DEFAULT NULL,
+  `nf` text DEFAULT NULL,
+  `valor` text DEFAULT NULL,
+  `dias_emitido` int(20) DEFAULT NULL,
+  `dias_vencimento` int(20) DEFAULT NULL,
+  PRIMARY KEY (`id_fatura`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+
+
+-- `bd-vazio`.faturas_setembro definition
+
+CREATE TABLE `faturas_setembro` (
+  `id_fatura` int(20) NOT NULL AUTO_INCREMENT,
+  `recebida` varchar(5) NOT NULL,
+  `gestaotop` varchar(5) NOT NULL,
+  `rateio` varchar(5) NOT NULL,
+  `fornecedor` int(5) NOT NULL,
+  `emitido` date DEFAULT NULL,
+  `vencimento` date DEFAULT NULL,
+  `nf` text DEFAULT NULL,
+  `valor` text DEFAULT NULL,
+  `dias_emitido` int(20) DEFAULT NULL,
+  `dias_vencimento` int(20) DEFAULT NULL,
+  PRIMARY KEY (`id_fatura`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+
+
+-- `bd-vazio`.fornecedor definition
+
+CREATE TABLE `fornecedor` (
+  `id_fornecedor` int(20) NOT NULL AUTO_INCREMENT,
+  `razao_social` varchar(100) DEFAULT NULL,
+  `nome_fantasia` varchar(100) DEFAULT NULL,
+  `descricao` varchar(100) DEFAULT NULL,
+  `telefone` varchar(30) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `contato` varchar(100) DEFAULT NULL,
+  `cep` text NOT NULL,
+  `rua` varchar(100) DEFAULT NULL,
+  `numero` text NOT NULL,
+  `complemento` varchar(100) DEFAULT NULL,
+  `bairro` varchar(100) DEFAULT NULL,
+  `cidade` varchar(100) DEFAULT NULL,
+  `uf` varchar(100) DEFAULT NULL,
+  `informacao_adicional` text DEFAULT NULL,
+  `rateio` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id_fornecedor`)
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+
+
+-- `bd-vazio`.log_login definition
+
+CREATE TABLE `log_login` (
+  `id_log_login` int(20) NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(50) DEFAULT NULL,
+  `data_login` varchar(50) DEFAULT NULL,
+  `tipo` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id_log_login`)
+) ENGINE=InnoDB AUTO_INCREMENT=161 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+
+
+-- `bd-vazio`.sistema definition
+
+CREATE TABLE `sistema` (
+  `id_sistema` int(4) NOT NULL AUTO_INCREMENT,
+  `versao` varchar(15) NOT NULL,
+  `token_github` varchar(50) NOT NULL,
+  `validade_token` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id_sistema`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+
+
+-- `bd-vazio`.usuarios definition
+
+CREATE TABLE `usuarios` (
+  `id_usuario` int(4) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL,
+  `usuario` varchar(50) NOT NULL,
+  `senha` varchar(100) NOT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `token` varchar(100) DEFAULT NULL,
+  `expira` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id_usuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+
+INSERT INTO usuarios
+(id_usuario, nome, usuario, senha, email, token, expira)
+VALUES(1, 'Admin', 'super.user', '$2b$12$tSqn2CSVbcz5npVK5mEOWOLUSIdoDdOUYy1v7NarMtFx3zPynPdvG', 'luanlucascorp@gmail.com', NULL, NULL);
+
+CREATE TABLE `custos` (
+  `id_custos` int(20) NOT NULL AUTO_INCREMENT,
+  `setor` varchar(50),
+  `descricao` varchar(50),
+  `categoria` varchar(30),
+  `previsto` DECIMAL(10,2),
+  `realizado` DECIMAL(10,2),
+  `data` varchar(8),
+  `criado` date,
+  `alterado` date,
+  `usuario` varchar(30),
+  PRIMARY KEY (`id_custos`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+
+CREATE TABLE `ideias` (
+  `id_ideias` int(20) NOT NULL AUTO_INCREMENT,
+  `ideia` varchar(50),
+  `prioridade` varchar(50),
+  `categoria` varchar(30),
+  `atribuido` varchar(30),
+  `status` varchar(30),
+  `usuario_criado` varchar(30),
+  `data_criado` varchar(30),
+  `usuario_alterado` varchar(30),
+  `data_alterado` varchar(30),
+  PRIMARY KEY (`id_ideias`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;

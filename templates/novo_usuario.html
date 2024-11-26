@@ -1,0 +1,41 @@
+{% extends "template.html" %}
+{% block conteudo %}
+
+<div class="container-fluid">
+   <div class="shadow p-3 mb-2 bg-dark h2 rounded text-white text-center "><i class="fas fa-users"></i> Novo Usuários <a class="btn btn-danger float-left" href="{{ url_for('usuarios') }}">Voltar</a></div>
+    <form action="{{ url_for('novo_usuario') }}" method="post" enctype="multipart/form-data" class="bg-dark container-fluid rounded">
+        <fieldset>
+       <div class="row">
+           <div class="col-sm">
+           <div class="form-group">
+            <label class="p-2 mb-2 bg-dark h5 rounded text-white" for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" class="form-control col-sm-6 col-form-label" required autocomplete="off">
+           </div>
+           <div class="form-group">
+            <label class="p-2 mb-2 bg-dark h5 rounded text-white" for="usuario">Usuário</label>
+            <input type="text" id="usuario" name="usuario" class="form-control col-sm-6 col-form-label" required autocomplete="off">
+           </div>
+           <div class="form-group">
+            <label class="p-2 mb-2 bg-dark h5 rounded text-white" for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" class="form-control col-sm-6 col-form-label" required autocomplete="off">
+           </div>
+           <div class="form-group">
+            <label class="p-2 mb-2 bg-dark h5 rounded text-white" for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control col-sm-6 col-form-label" required autocomplete="off">
+           </div>
+            <button type="submit" class="btn btn-primary mr-2"><i class="fas fa-plus-square "></i> Adicionar</button>
+           </div>
+
+           <div class="col-sm">
+
+            <div>
+
+                </div>
+           </div>
+           </div>
+                <br><br>
+        </fieldset>
+      </form>
+
+</div>
+{% endblock %}

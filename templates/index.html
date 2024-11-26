@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Busca de CEP</title>
+    <script>
+        function buscarCEP() {
+            var cep = document.getElementById('cep').value;
+            var url = `https://viacep.com.br/ws/${cep}/json/`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => preencherCampos(data))
+                .catch(error => console.log(error));
+        }
+
+        function preencherCampos(data) {
+            document.getElementById('logradouro').value = data.logradouro;
+            document.getElementById('bairro').value = data.bairro;
+            document.getElementById('cidade').value = data.localidade;
+            document.getElementById('estado').value = data.uf;
+        }
+    </script>
+</head>
+<body>
+    <h1>Busca de CEP</h1>
+    <label for="cep">CEP:</label>
+    <input type="text" id="cep">
+    <button onclick="buscarCEP()">Buscar</button>
+
+    <br>
+
+    <label for="logradouro">Logradouro:</label>
+    <input type="text" id="logradouro">
+
+    <br>
+
+    <label for="bairro">Bairro:</label>
+    <input type="text" id="bairro">
+
+    <br>
+
+    <label for="cidade">Cidade:</label>
+    <input type="text" id="cidade">
+
+    <br>
+
+    <label for="estado">Estado:</label>
+    <input type="text" id="estado">
+</body>
+</html>

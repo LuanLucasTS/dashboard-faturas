@@ -1,0 +1,40 @@
+{% extends "template.html" %}
+{% block conteudo %}
+
+<div class="container-fluid">
+    <div class="shadow p-3 mb-2 bg-dark h2 rounded text-white text-center "><i class="fas fa-key"></i> Alterar Token Github</div>
+    <form action="{{ url_for('altera_token_github') }}" method="post" enctype="multipart/form-data" class="bg-dark container-fluid rounded">
+        <fieldset>
+       <div class="row">
+           <div class="col-sm">
+           <div class="form-group">
+            <label class="p-2 mb-2 bg-dark h5 rounded text-white" for="chave">Nova Chave</label>
+            <input type="text" id="chave" name="chave" class="form-control col-sm-6 col-form-label" required autocomplete="off">
+           </div>
+           <div class="form-group">
+            <label class="p-2 mb-2 bg-dark h5 rounded text-white" for="validade">Validade</label>
+            <input type="date" id="validade" name="validade" class="form-control col-sm-6 col-form-label" required autocomplete="off">
+           </div>
+            <button type="submit" class="btn btn-primary mr-2"><i class="fas fa-edit"></i> Alterar</button>
+           </div>
+           <div class="col-sm">
+            <div>
+                </div>
+           </div>
+           </div>
+                <br><br>
+        </fieldset>
+      </form>
+</div>
+<script>
+    function definirDataPadrao(idCampo) {
+        var campo = document.getElementById(idCampo);
+        var dataAtual = new Date();
+        var dataFormatada = dataAtual.toISOString().slice(0, 10);
+        campo.value = dataFormatada;
+    }
+    // Chama a função para cada campo de data desejado
+    definirDataPadrao("validade");
+    definirDataPadrao("vencimento");
+</script>
+{% endblock %}

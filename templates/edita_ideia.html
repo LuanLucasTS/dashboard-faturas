@@ -1,0 +1,97 @@
+{% extends "template.html" %}
+{% block conteudo %}
+{% for ideia in ideia %}
+<div class="container-fluid">
+    <div class="shadow p-3 mb-2 bg-dark h2 rounded text-white text-center "><i class="fas fa-plus"></i> Nova Idéia</div>
+    <form action="{{ url_for('editar_ideia', id_ideia=ideia[0]) }}" method="post" enctype="multipart/form-data" class="bg-dark container-fluid rounded">
+        <fieldset>
+       <div class="row">
+           <div class="col-sm">
+           <div class="form-group">
+            <label class="p-2 mb-2 bg-dark h5 rounded text-white" for="ideia">Descrição</label>
+            <input type="text" id="ideia" name="ideia" class="form-control col-sm-6 col-form-label" required autocomplete="off" value="{{ ideia[1] }}">
+           </div>
+           <div class="form-group">
+                <label for="prioridade" class="p-2 mb-2 bg-dark h5 rounded text-white">Prioridade</label>
+                <select class="form-control col-sm-6 col-form-label" id="prioridade" name="prioridade">
+                    <option value="{{ ideia[2] }}">{{ ideia[2] }}</option>
+                    <option value="Baixa">Baixa</option>
+                    <option value="Média">Média</option>
+                    <option value="Alta">Alta</option>
+                </select>
+           </div>
+           <div class="form-group ">
+                <label for="categoria" class="p-2 mb-2 bg-dark h5 rounded text-white">Categoria</label>
+                <select class="form-control col-sm-6 col-form-label" id="categoria" name="categoria">
+                    <option value="{{ ideia[3] }}">{{ ideia[3] }}</option>
+                    <option value="Desenvolvimento">Desenvolvimento</option>
+                    <option value="Infraestrutura">Infraestrutura</option>
+                    <option value="Melhoria">Melhoria</option>
+                </select>
+           </div>
+           <div class="form-group">
+               <label class="p-2 mb-2 bg-dark h5 rounded text-white" for="atribuido">Atribuído</label><br>
+            <select class="form-control col-sm-6 col-form-label" id="atribuido" name="atribuido">
+                <option value=""></option>
+                <option value="{{ ideia[4] }}">{{ ideia[4] }}</option>
+                <option value="Luan">Luan</option>
+                <option value="Thiago">Thiago</option>
+                <option value="Samuel">Samuel</option>
+            </select>
+           </div>
+           <div class="form-group">
+               <label class="p-2 mb-2 bg-dark h5 rounded text-white" for="status">Status</label><br>
+            <select class="form-control col-sm-6 col-form-label" id="status" name="status">
+                <option value="{{ ideia[5] }}">{{ ideia[5] }}</option>
+                <option value="A fazer">A fazer</option>
+                <option value="Fazendo">Fazendo</option>
+                <option value="Feito">Feito</option>
+            </select>
+           </div>
+           <button type="submit" class="btn btn-primary mr-2"><i class="fas fa-plus-square "></i> Adicionar</button>
+           </div>
+           <div class="col-sm">
+
+
+            <div>
+
+                </div>
+           </div>
+           </div>
+                <br><br>
+        </fieldset>
+      </form>
+
+</div>
+
+
+<script>
+    function definirDataPadrao(idCampo) {
+        var campo = document.getElementById(idCampo);
+        var dataAtual = new Date();
+        var dataFormatada = dataAtual.toISOString().slice(0, 10);
+        campo.value = dataFormatada;
+    }
+
+    // Chama a função para cada campo de data desejado
+    definirDataPadrao("emitido");
+    definirDataPadrao("vencimento");
+</script>
+<script>
+    function formatarNumero(input) {
+        // Remove caracteres não numéricos
+        let valor = input.value.replace(/[^\d]/g, '');
+
+        // Divide o valor em partes antes e depois das casas decimais
+        let parteInteira = valor.substr(0, valor.length - 2);
+        let parteDecimal = valor.substr(valor.length - 2);
+
+        // Formata o valor com a vírgula
+        let valorFormatado = parteInteira + ',' + parteDecimal;
+
+        // Atualiza o valor do input
+        input.value = valorFormatado;
+    }
+</script>
+{% endfor %}
+{% endblock %}

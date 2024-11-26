@@ -1,0 +1,242 @@
+{% extends "template.html" %}
+{% block conteudo %}
+
+<div class="container-fluid">
+  <div class="shadow p-3 mb-2 bg-dark h2 rounded text-white text-center "><i class="fas fa-edit"></i> Changelog</div>
+<div class="list-group">
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <!--ADICIONAS AS MUDANÇAS DAQUI PARA BAIXO-->
+
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between"><h5 class="mb-1">1.7.0</h5></div>
+            <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Feito as modificações necessárias para tornar o rpositório público.</p>
+            <p class="mb-1"><span class="badge badge-pill badge-dark">Excluido</span> Removido o botão de atualização de token do github. Não pe mais necessário pois o repósitório está publico.</p>
+        <small>26 de Novembro de 2024</small>
+    </div>
+
+     <div class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between"><h5 class="mb-1">1.6.0</h5></div>
+            <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Adicionado a página de idéias.</p>
+        <small>15 de Abril de 2024</small>
+    </div>
+
+     <div class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between"><h5 class="mb-1">1.5.2</h5></div>
+            <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Adicionado a informação de caps lock ativado, na tela de login.</p>
+        <small>01 de Fevereiro de 2024</small>
+    </div>
+
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.5.1</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-danger">Corrigido</span> Correção do link de recuperação de senha.</p>
+    <small>25 de Janeiro de 2024</small>
+    </div>
+
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.5.1</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-danger">Corrigido</span> Corrigido as linhas vermelhas no modo somente visualização das faturas.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-warning">Desativado</span> Removido o downloadd de banco pois esse foi migrado para MariaDB.</p>
+    <small>07 de Dezembro de 2023</small>
+    </div>
+
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.5.0</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Refeito toda a parte de SQL de SQLite para Maria DB.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-danger">Corrigido</span> Corrigido e melhorado algumas partes do código, identificados durante a migração SQL.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-warning">Desativado</span> Removido toda a parte de softwares (tanto as páginas quanto as tabelas no banco).</p>
+    <small>06 de Dezembro de 2023</small>
+    </div>
+
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.4.8</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Criado os arquvos de requerimentos e dockerfile para subir o sistema em container.</p>
+    <small>01 de Dezembro de 2023</small>
+    </div>
+
+     <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.4.7</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-danger">Corrigido</span> Corrigido o erro "falta o campo rateio" ao inserir nova fatura.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Adicionado o campo de rateio na parte de fornecedores.</p>
+    <small>07 de Novembro de 2023</small>
+    </div>    
+    
+     <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.4.6</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Alterado a porta web para 80 por questão de facilidade.</p>
+    <small>04 de Outubro de 2023</small>
+    </div>
+
+     <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.4.5</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Adicionado gerenciamento da chave token do github para fazer atualizações.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Criado a troca de senha por email.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Alterado o layout da tela de login.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Criado o campo de email na configuração de usuário e novos usuários.</p>
+    <small>12 de Setembro de 2023</small>
+    </div>
+
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.4.4</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Alterado a forma de fazer atualização. Antes era pro shell script e agora é o python que faz a atualização.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-danger">Corrigido</span> Corrigido o texto da janela de confirmação de atualização da versão.</p>
+    <small>11 de Setembro de 2023</small>
+    </div>
+
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.4.3</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Configurado a paginação de logs para melhor visualização.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Configurado na rotina de backup, para fazer uma cópia do banco para o PC da TI.</p>
+    <small>05 de Setembro de 2023</small>
+    </div>
+
+   <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.4.2</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Adicionado a página onde mostra somente as faturas e nao precisa fazer login.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Alterado o tempo da sessão de duas para três horas.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-danger">Corrigido</span> Corrigido a pesquisa das faturas.</p>
+    <small>31 de Agosto de 2023</small>
+    </div>
+
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.4.1</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Adicionado a busca de endereço pelo CEP, no cadastro e edição de fornecedor.</p>
+    <small>28 de Agosto de 2023</small>
+    </div>
+
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.4.0</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Adicionado "Fornecedores" no menu superior e criado suas páginas de visualização adição e edição.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Criado o favicon.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Alterado a exibição de fornecedor nas faturas. Agora o fornecedor exibido nas faturas vem da tabela "fornecedor" e qualquer alteração no fornecedor, afeta a todos os meses.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Alterado o ícone de edição de fatura para compactar a linha.</p>
+    <small>25 de Agosto de 2023</small>
+    </div>
+
+
+   <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.3.2</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Refeito o modo como se edita as fatura. Ao invés de se editar todas de uma vez, edita-se uma de cada vez.</p>
+    <small>24 de Agosto de 2023</small>
+    </div>
+
+
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.3.1</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-warning">Desativado</span> Removido as colunas "carimbo admin", "cadastro" e "descrição" das telas de faturas.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Padronizado a lista de faturas e replicado para todos os meses.</p>
+    <small>23 de Agosto de 2023</small>
+    </div>
+
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.3.0</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Criado as páginas de faturas de todos os meses e alterado o código de edição, adição e exclusão para cada mês.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Criado uma página inicial, mas sem nada ainda</p>
+    <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Adicionado todos os meses de fatura ao menu superior</p>
+    <small>22 de Agosto de 2023</small>
+    </div>
+
+
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.2.2</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Criado a página de Softwares bem como sua página de edição e adicionada ao menu superior.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Configurado log de logins tanto para sucesso quanto para falha e criado a página de visualização no menu superior</p>
+    <p class="mb-1"><span class="badge badge-pill badge-danger">Corrigido</span> Corrigido a lista de softwares saindo da tela e implementado rolagem horizontal.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-danger">Corrigido</span> Corrigido erro ao tentar logar com usuário inexistente.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Unificado as funções de "Login" e "Autenticar" para otimizar o código.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Configurado o tempo da seção do usuário para duas horas.</p>
+    <small>16 de Agosto de 2023</small>
+    </div>
+
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.2.1</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Configurado para pegar duas casas decimais automaticamente em "Faturas > Editar Faturas" e "Nova Fatura".</p>
+    <small>15 de Agosto de 2023</small>
+    </div>
+
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.2.0</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Criado a página de login. Agora não é possível visualizar as páginas sem estar autenticado.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Adicionado o menu superior "Main" para configurações.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Criado a página de administração de usuários e novo usuário encontrado em "Main > Usuários".</p>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Criado a página "Manutenção" em "Main" no menu superior e criado o botão para atualizar a dashboard pelo navegador e o botão de download do BD.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Criado e configurado um template para as páginas HTML. Agora todas as páginas HTML estarão sempre com os menus iguais.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Configurado o script de atualização pelo github. Não é mais necessário transferir os arquivos manualmente para o servidor.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Configurado a rotina de backup.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Removido "Nova Fatura" no menu de navegação superior e adicionado o botão "Nova Fatura" na página de editar faturas.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Removido "Pesquisar" no menu de navegação superior e adicionado somente na tela de fatura, pois é uma pesquisa de fatura. No lugar foi colocado a versão atual da dashboard</p>
+    <small>14 de Agosto de 2023</small>
+    </div>
+
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">1.0.1</h5>
+    </div>
+    <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Criado a página de changelog.</p>
+    <p class="mb-1"><span class="badge badge-pill badge-danger">Corrigido</span> Corrigido o link do "Editar Faturas em "Faturas > Editar Faturas > Nova Fatura".</p>
+    <p class="mb-1"><span class="badge badge-pill badge-primary">Alterado</span> Removido as cores na coluna "Rateio", conforme solicitado.</p>
+    <small>11 de Agosto de 2023</small>
+    </div>
+
+      <div class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">1.0.0</h5>
+        </div>
+        <p class="mb-1"><span class="badge badge-pill badge-success">Adicionado</span> Finalizada e liberada para uso a versão funcional do dashboad de faturas onde inclui as páginas de visualisação das mesmas, adição e remoção de faturas.</p>
+        <p class="mb-1"><span class="badge badge-pill badge-info">Informação</span> Dashboard criada com backend usando Python e o Framework Flask. Frontend utiliza HTML e bootstrap para para o CSS. O banco de dados é o sqlite3.</p>
+        <small>10 de Agosto de 2023</small>
+      </div>
+
+  <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+    </div>
+        <span class="badge badge-pill badge-success">Adicionado</span>
+        <span class="badge badge-pill badge-danger">Corrigido</span>
+        <span class="badge badge-pill badge-primary">Alterado</span>
+        <span class="badge badge-pill badge-warning">Desativado</span>
+        <span class="badge badge-pill badge-secondary">Preview</span>
+        <span class="badge badge-pill badge-info">Informação</span>
+        <span class="badge badge-pill badge-dark">Excluido</span>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+{% endblock %}

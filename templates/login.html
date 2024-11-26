@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard TI</title>
+    <link rel="shortcut icon" href="/static/favicon.png">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.3/css/all.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+</head>
+<link href="/static/login.css" rel="stylesheet">
+<body class="text-center">
+<main class="form-signin">
+    <div>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul id="messages" class="list-unstyled">
+            {% for message in messages %}
+                <li class="alert alert-info">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    </div>
+  <form action="{{ url_for('login') }}" method="post">
+    <img class="mb-4" src="/static/logo.png" alt="" width="176" height="95">
+    <h1 class="h3 mb-3 fw-normal">Painel TI</h1>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" id="usuario" name="usuario" autocomplete="off" placeholder="nome.sobrenome">
+      <label for="usuario">Usuário</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+      <label for="senha">Senha</label>
+    </div>
+              <div id="capsLockWarning" style="display: none; color: red; text-align:center;">Caps Lock está ativado!</div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button><br><br>
+      <a class="link-secondary" href="/recuperasenha">Esqueceu usuário ou senha?</a>
+    <p class="mt-5 mb-3 text-muted">&copy; TI Financial - 2023 - 2024 <a href="https://financial.vivaintra.com/social/perfil/35776/sobre" class="text-muted" target="_blank">Luan Lucas</a></p>
+  </form>
+<script>
+// Função para verificar se o Caps Lock está ativado
+function isCapsLockOn(event) {
+    return event.getModifierState && event.getModifierState('CapsLock');
+}
+
+// Função para exibir ou ocultar um aviso de Caps Lock ativado
+function displayCapsLockWarning(event) {
+    const capsLockWarningElement = document.getElementById('capsLockWarning');
+    if (isCapsLockOn(event)) {
+        capsLockWarningElement.style.display = 'block'; // Mostra o aviso
+    } else {
+        capsLockWarningElement.style.display = 'none';  // Oculta o aviso
+    }
+}
+
+// Adiciona um ouvinte de evento ao campo de senha para verificar o Caps Lock quando uma tecla é pressionada
+document.getElementById('senha').addEventListener('keyup', displayCapsLockWarning);
+
+// Adiciona um ouvinte de evento ao campo de senha para verificar o Caps Lock quando recebe foco
+document.getElementById('senha').addEventListener('focus', function() {
+    const capsLockWarningElement = document.getElementById('capsLockWarning');
+    if (isCapsLockOn(event)) {
+        capsLockWarningElement.style.display = 'block'; // Mostra o aviso
+    } else {
+        capsLockWarningElement.style.display = 'none';  // Oculta o aviso
+    }
+});
+</script>
+</main>
+</body>
+</html>
